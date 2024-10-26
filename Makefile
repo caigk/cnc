@@ -8,6 +8,9 @@ SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = source
 BUILDDIR      = source/_build
 
+CONDA_ENV_NAME=base
+PWD=$(shell pwd)
+
 # Put it first so that "make" without argument is like "make help".
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
@@ -20,3 +23,5 @@ help:
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	cp -R $(BUILDDIR)/html/* docs
 
+run:
+	conda run -n ${CONDA_ENV_NAME} --cwd=$(PWD)  --live-stream sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)/html"
