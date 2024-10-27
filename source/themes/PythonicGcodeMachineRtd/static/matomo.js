@@ -4,7 +4,7 @@ var _paq = window._paq = window._paq || [];
 _paq.push(['trackPageView']);
 _paq.push(['enableLinkTracking']);
 (function () {
-	var u = "//ai.baitech.com.cn:9910/";
+	var u = "//stat.baitech.com.cn";
 	_paq.push(['setTrackerUrl', u + 'matomo.php']);
 	_paq.push(['setSiteId', '1']);
 	var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
