@@ -10,4 +10,12 @@ pip install myst-parser -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install sphinx-autobuild -i https://pypi.tuna.tsinghua.edu.cn/simple 
 
 sphinx-quickstart
+
+
+#本地运行
+make run
+
+#编译
+make html
+
 ```
